@@ -54,6 +54,16 @@ public class LinkyListy {
         }
     }
 
+public void delByIndex(int index){
+    if (head==null) return;
+
+    Node temp=head;
+    for(int i=0; i<index-1;i++){
+        temp=temp.next;
+    }
+    Node temp2=temp.next.next;
+    temp.next=temp2;
+}
 
 
     public void insert(int pos,int data){ // 4) Insert
